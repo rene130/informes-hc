@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informes HC Garage</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1c1f24">
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#1c1f24;color:#eee;font-family:system-ui,sans-serif;text-align:center}
+img{width:96px;border-radius:20px}a{color:#e8601c;font-weight:600}
+</style>
+</head>
+<body>
+<div><img src="icon-192.png" alt=""><p>Abriendo Informes HC Garage…</p>
+<p><a id="go" href="https://claude.ai/code/artifact/3e1eac83-e0d2-4efb-86ff-1bb1632eeb09">Abrir informes</a></p></div>
+<script>
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+// Solo redirige cuando se abre desde el ícono instalado, para que Chrome alcance a ofrecer "Instalar"
+if (matchMedia('(display-mode: standalone)').matches) location.replace(document.getElementById('go').href);
+</script>
+</body>
+</html>
